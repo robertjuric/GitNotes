@@ -15,8 +15,8 @@ https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#pl
 4. Set the origin remote URL:
 If clone was done via HTTPS, need to set-url. If clone was done via SSH, skip this step.
   
-    ```git remote set-url origin git@github.com:username/your-repository.git```
-
+```git remote set-url origin git@github.com:username/your-repository.git```
+  
 ## The Basics
 ---
 ### Cloning
