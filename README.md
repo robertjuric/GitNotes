@@ -8,9 +8,23 @@ My personal notes for common Git CLI tasks.
 ### Overview
 1. Create new SSH key on dev machine and add it to ssh-agent  
 https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-linux  
+```
+	$ ssh-keygen -t rsa -b 4096 -C "your_email@domain.com"
+```
+Save it to the default location, optionally enter a passphrase for the key.
+Then add the key to the ssh-agent. Use the location from the previous step.
+```
+	$ ssh-add ~/.ssh/id_rsa
+```
 
 2. Add SSH key to GitHub Profile  
 https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-linux  
+Install xclip to copy the file to the clipboard. Use the location from the previous steps.
+```
+	$ sudo apt install xclip
+	$ xclip -sel clip < ~/.ssh/id_rsa.pub
+```
+Then login the GitHub.com website and under your settings click 'SSH and GPG keys' and then 'New SSH key' and paste the key.
 
 3. Clone the Repo  
 
@@ -19,6 +33,7 @@ If clone was done via HTTPS, need to set-url. If clone was done via SSH, skip th
 ```
 	git remote set-url origin git@github.com:username/your-repository.git
 ```
+
 ## The Basics
 ---
 
