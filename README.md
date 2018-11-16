@@ -5,7 +5,7 @@ My personal notes for common Git CLI tasks.
 ## Getting Started with GitHub
 ---
 
-### Overview
+### Setting Up SSH
 1. Create new SSH key on dev machine and add it to ssh-agent  
 https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-linux  
 	```
@@ -39,9 +39,9 @@ In the directory containing your project:
 ```
 	git init
 ```
-Add the files with `git add`.
-Commit to the local repository with `git commit -m "Message"`.
-Create the repository on the cloud.
+Add the files with `git add`.  
+Commit to the local repository with `git commit -m "Message"`.  
+Create the repository on the cloud.  
 Add the remote repository and push to the remote repo:
 ```
 	git remote add origin git@github.com:username/new_repo
