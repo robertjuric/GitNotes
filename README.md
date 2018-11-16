@@ -42,7 +42,7 @@ In the directory containing your project:
 Add the files with `git add`.  
 Commit to the local repository with `git commit -m "Message"`.  
 Create the repository on the cloud.  
-Add the remote repository and push to the remote repo:
+Add the remote repository and link/push to the remote repo:
 ```
 	git remote add origin git@github.com:username/new_repo
 	git push -u origin master
