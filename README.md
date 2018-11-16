@@ -30,23 +30,35 @@ https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#pl
 
 	* Then login the GitHub.com website and under your settings click 'SSH and GPG keys' and then 'New SSH key' and paste the key.
 
-3. Clone the Repo  
-
-4. Set the origin remote URL.
-	* If clone was done via HTTPS, need to set-url. If clone was done via SSH, skip this step.
-
-```
-	git remote set-url origin git@github.com:username/your-repository.git
-```
-
 ## The Basics
 ---
+
+### Creating
+Creating a new repository from code on a machine to a remote cloud repo.
+In the directory containing your project:
+```
+	git init
+```
+Add the files with `git add`.
+Commit to the local repository with `git commit -m "Message"`.
+Create the repository on the cloud.
+Add the remote repository and push to the remote repo:
+```
+	git remote add origin git@github.com:username/new_repo
+	git push -u origin master
+```
+From here you are able to commit locally and push to the remote repo as normal.
 
 ### Cloning
 Used to copy from repository to repository. Commonly used to clone from a remote cloud repo such as GitHub or GitLab to a local repository.
 ```
 	git clone ssh://user@example.com/project.git /directory/path
 ```	
+* If clone was done via HTTPS, need to set-url. If clone was done via SSH, skip this step.
+
+```
+	git remote set-url origin git@github.com:username/your-repository.git
+```
 ### Committing
 Used to commit changes to the local repository.
 
