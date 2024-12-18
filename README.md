@@ -9,14 +9,14 @@ My personal notes for common Git CLI tasks.
 1. Create new SSH key on dev machine and add it to ssh-agent  
 https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#platform-linux  
 	```
-	$ ssh-keygen -t rsa -b 4096 -C "your_email@domain.com"
+	$ ssh-keygen -t ed25519 -C "your_email@example.com"
 	```
 
 	* Save it to the default location, optionally enter a passphrase for the key.
 	* Then add the key to the ssh-agent. Use the location from the previous step.
 
 	```
-	$ ssh-add ~/.ssh/id_rsa
+	$ ssh-add ~/.ssh/id_ed25519
 	```
 
 2. Add SSH key to GitHub Profile  
@@ -25,7 +25,7 @@ https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#pl
 
 	```
 	$ sudo apt install xclip
-	$ xclip -sel clip < ~/.ssh/id_rsa.pub
+	$ xclip -sel clip < ~~/.ssh/id_ed25519
 	```
 
 	* Then login the GitHub.com website and under your settings click 'SSH and GPG keys' and then 'New SSH key' and paste the key.
