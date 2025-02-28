@@ -45,9 +45,9 @@ Create the repository on the cloud.
 Add the remote repository and link/push to the remote repo:
 ```
 	git remote add origin git@github.com:username/new_repo
-	git push -u origin master
+	git push -u origin main
 ```
-The `-u` flag specifies an `upstream` branch and is used as a tracking reference. The `origin` statement defines it as a remote repository and `master` is the branch name. Once the upstream branch has been set you can use argumentless commands.  
+The `-u` flag specifies an `upstream` branch and is used as a tracking reference. The `origin` statement defines it as a remote repository and `main` is the branch name. Once the upstream branch has been set you can use argumentless commands.  
 From here you are able to commit locally and push to the remote repo as normal.
 
 ### Cloning
